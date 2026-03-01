@@ -3,143 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cooperative Visibility Gain — UAV Video Gallery</title>
+  <title>A Quantified Safety and Efficiency Analytical Approach for Cooperative Autonomous Driving Systems</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="wrap">
-    <h1>Cooperative Visibility Gain — UAV Video Gallery</h1>
+    <h1>A Quantified Safety and Efficiency Analytical Approach for Cooperative Autonomous Driving Systems</h1>
     <p class="sub">
-      Short clips used in the supplementary evaluation of cooperative visibility gain in cooperative autonomous driving.
-      Categories follow our scenario taxonomy (geometry-constrained following, heavy-vehicle occlusion, ramp merging, signalized queueing, bus-stop interactions).
+      This page provides supplementary videos and figure snapshots demonstrating cooperative visibility gain
+      in cooperative autonomous driving systems.
     </p>
-
-    <div class="controls">
-      <label>
-        Filter:
-        <select id="category">
-          <option value="all">All</option>
-          <option value="geometry">Geometry-constrained following</option>
-          <option value="heavy">Heavy-vehicle occlusion</option>
-          <option value="ramp">Ramp entry & merging</option>
-          <option value="signal">Signal start-up & queueing</option>
-          <option value="bus">Bus-stop interactions</option>
-        </select>
-      </label>
-
-      <label>
-        Search:
-        <input id="search" type="search" placeholder="e.g., curve, ramp, truck, queue..." />
-      </label>
-    </div>
   </header>
 
   <main class="wrap">
-    <div id="grid" class="grid"></div>
+    <div class="sectionTitle"><b>Supplementary Videos</b></div>
+    <div class="grid">
+      <article class="card">
+        <h3>Video S1 — Geometry-constrained following</h3>
+        <p>Curves/grades induce persistent occlusions; cooperation recovers newly visible regions.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/S1_geometry.mp4" type="video/mp4" />
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S2 — Heavy-vehicle occlusion</h3>
+        <p>Large vehicles block line-of-sight; cooperative viewpoints enable occlusion lift.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/S2_heavy_vehicle.mp4" type="video/mp4" />
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S3 — Ramp entry & merging</h3>
+        <p>Merging conflict zones benefit from cooperative visibility union (V2V/V2I).</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/S3_ramp_merge.mp4" type="video/mp4" />
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S4 — Signal start-up & queueing</h3>
+        <p>Queues along curves can be partially hidden; cooperation improves queue observability.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/S4_signal_queue.mp4" type="video/mp4" />
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S5 — Bus-stop interactions</h3>
+        <p>Curbside interactions create intermittent occlusions; cooperation enhances curbside visibility.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/S5_bus_stop.mp4" type="video/mp4" />
+        </video>
+      </article>
+    </div>
+
+    <div class="sectionTitle"><b>Figure Snapshots (from PDF)</b></div>
+
+    <!-- Put your exported PNG/JPG under /figures/ and edit the filenames below -->
+    <div class="figure">
+      <img src="figures/FigS1_scenario_gallery.png" alt="Figure S1" />
+      <div class="caption"><b>Figure S1.</b> Scenario gallery from UAV recordings illustrating representative occlusion mechanisms.</div>
+    </div>
+
+    <div class="figure">
+      <img src="figures/FigS2_mapping_pipeline.png" alt="Figure S2" />
+      <div class="caption"><b>Figure S2.</b> OSM-to-UAV alignment and scenario reconstruction pipeline.</div>
+    </div>
+
+    <div class="figure">
+      <img src="figures/FigS3_adtb_demo.png" alt="Figure S3" />
+      <div class="caption"><b>Figure S3.</b> MATLAB Automated Driving Toolbox simulation view (BEV + sensor detections) for visibility evaluation.</div>
+    </div>
+
+    <!-- Optional: provide PDF download -->
+    <p class="sub" style="text-align:center;margin-top:18px;">
+      Download the full supplementary PDF:
+      <a href="files/Supplementary.pdf">Supplementary.pdf</a>
+    </p>
   </main>
 
   <footer class="wrap footer">
     <p>
-      © <span id="year"></span> — Dataset & code links:
-      <a href="#" id="datasetLink">Dataset (DOI/link)</a> ·
-      <a href="#" id="codeLink">Code repository</a>
+      © <span id="y"></span> ·
+      <a href="https://github.com/josephguogxy/Cooperative-Autonomous-Vehicles-Quantitative-Perception-Gain">GitHub Repository</a>
     </p>
   </footer>
 
   <script>
-    // ====== 1) Put your links here ======
-    document.getElementById("datasetLink").href = "https://YOUR_DATASET_LINK";
-    document.getElementById("codeLink").href = "https://YOUR_CODE_LINK";
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // ====== 2) Your video list (edit this) ======
-    // Option A: host videos in /videos/ folder in this repo (small mp4 files)
-    // Option B: put external direct mp4 links (Zenodo/OSF/etc.)
-    const VIDEOS = [
-      {
-        id: "S1",
-        title: "Geometry-constrained following (right curve)",
-        category: "geometry",
-        tags: ["curve", "following", "occlusion"],
-        desc: "Curved segment where road geometry induces persistent occlusions; cooperative agents extend visibility around curvature.",
-        src: "videos/S1_geometry_curve.mp4"
-      },
-      {
-        id: "S2",
-        title: "Heavy-vehicle occlusion (truck lead)",
-        category: "heavy",
-        tags: ["truck", "occlusion", "lead vehicle"],
-        desc: "Large vehicle blocks ego visibility; cooperative vantage points recover newly visible regions and earlier awareness.",
-        src: "videos/S2_heavy_truck.mp4"
-      },
-      {
-        id: "S3",
-        title: "Ramp entry & merging conflict zone",
-        category: "ramp",
-        tags: ["ramp", "merge", "conflict zone"],
-        desc: "On-ramp merging with fast-changing conflict region; cooperation improves conflict-zone coverage.",
-        src: "videos/S3_ramp_merge.mp4"
-      },
-      {
-        id: "S4",
-        title: "Signal start-up & queueing (curved queue)",
-        category: "signal",
-        tags: ["signal", "queue", "stop-and-go"],
-        desc: "Signalized queue extends along a curve; cooperation helps observe queue tail and restart dynamics.",
-        src: "videos/S4_signal_queue.mp4"
-      },
-      {
-        id: "S5",
-        title: "Bus-stop interaction & spillback",
-        category: "bus",
-        tags: ["bus stop", "spillback", "lane change"],
-        desc: "Curbside interactions with intermittent occlusions; cooperation improves visibility in curbside zone.",
-        src: "videos/S5_bus_stop.mp4"
-      }
-    ];
-
-    const grid = document.getElementById("grid");
-    const sel = document.getElementById("category");
-    const q = document.getElementById("search");
-
-    function render() {
-      const cat = sel.value;
-      const query = q.value.trim().toLowerCase();
-
-      const items = VIDEOS.filter(v => {
-        const okCat = (cat === "all") || (v.category === cat);
-        const hay = (v.title + " " + v.desc + " " + v.tags.join(" ")).toLowerCase();
-        const okQ = !query || hay.includes(query);
-        return okCat && okQ;
-      });
-
-      grid.innerHTML = items.map(v => `
-        <article class="card">
-          <div class="cardTop">
-            <div class="badge">${v.id}</div>
-            <h3>${v.title}</h3>
-            <p class="desc">${v.desc}</p>
-          </div>
-
-          <video controls preload="metadata" playsinline>
-            <source src="${v.src}" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
-          <div class="tags">
-            ${v.tags.map(t => `<span class="tag">${t}</span>`).join("")}
-          </div>
-        </article>
-      `).join("");
-
-      if (items.length === 0) {
-        grid.innerHTML = `<p>No videos match the current filter/search.</p>`;
-      }
-    }
-
-    sel.addEventListener("change", render);
-    q.addEventListener("input", render);
-    render();
+    document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
