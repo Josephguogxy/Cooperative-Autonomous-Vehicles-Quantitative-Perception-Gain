@@ -6,62 +6,249 @@
   <title>A Quantified Safety and Efficiency Analytical Approach for Cooperative Autonomous Driving Systems</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="wrap">
     <h1>A Quantified Safety and Efficiency Analytical Approach for Cooperative Autonomous Driving Systems</h1>
     <p class="sub">
-      This page provides supplementary videos and figure snapshots demonstrating cooperative visibility gain
-      in cooperative autonomous driving systems.
+      This page provides supplementary UAV clips used to evaluate cooperative visibility gain in cooperative autonomous driving systems,
+      together with figure snapshots and a downloadable supplementary PDF. Videos are organized into five scenario categories:
+      geometry-constrained following, heavy-vehicle-induced occlusions, ramp entry and merging, signal start-up and queueing,
+      and bus-stop interactions.
     </p>
   </header>
 
   <main class="wrap">
     <div class="sectionTitle"><b>Supplementary Videos</b></div>
+
+    <!-- ===================================================== -->
+    <!-- Category 1: Geometry-Constrained Following (S1–S4)     -->
+    <!-- ===================================================== -->
+    <div class="sectionTitle"><b>Category A — Geometry-Constrained Following</b></div>
+    <p class="sub" style="text-align:left; margin-top:0;">
+      Curves/grades induce persistent occlusions; cooperation recovers newly visible regions and extends occlusion-constrained visibility.
+    </p>
     <div class="grid">
       <article class="card">
-        <h3>Video S1 — Geometry-constrained following</h3>
-        <p>Curves/grades induce persistent occlusions; cooperation recovers newly visible regions.</p>
+        <h3>Video S1 — Following-1</h3>
+        <p>Geometry-constrained following clip 1.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/following1_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S2 — Following-2</h3>
+        <p>Geometry-constrained following clip 2.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/following2_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S3 — Following-3</h3>
+        <p>Geometry-constrained following clip 3.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/following3_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S4 — Following-4</h3>
+        <p>Geometry-constrained following clip 4.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/following4_web.mp4" type="video/mp4">
+        </video>
+      </article>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Category 2: Heavy-Vehicle Occlusion (S5–S10)           -->
+    <!-- ===================================================== -->
+    <div class="sectionTitle"><b>Category B — Heavy-Vehicle-Induced Occlusion</b></div>
+    <p class="sub" style="text-align:left; margin-top:0;">
+      Large vehicles (e.g., trucks) block line-of-sight; cooperative viewpoints enable occlusion lift and earlier awareness.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Video S5 — Truck-1</h3>
+        <p>Heavy-vehicle occlusion clip 1.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Truck1_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S6 — Truck-2</h3>
+        <p>Heavy-vehicle occlusion clip 2.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Truck2_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S7 — Truck-3</h3>
+        <p>Heavy-vehicle occlusion clip 3.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Truck3_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <!-- NOTE: your folder shows "Turck4_web.mp4" (typo). -->
+      <!-- If you rename it to Truck4_web.mp4, update the src below accordingly. -->
+      <article class="card">
+        <h3>Video S8 — Truck-4</h3>
+        <p>Heavy-vehicle occlusion clip 4.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Turck4_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S9 — Truck-5</h3>
+        <p>Heavy-vehicle occlusion clip 5.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Truck5_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S10 — Truck-6</h3>
+        <p>Heavy-vehicle occlusion clip 6.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Truck6_web.mp4" type="video/mp4">
+        </video>
+      </article>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Category 3: Ramp Entry & Merging (S11–S14)             -->
+    <!-- ===================================================== -->
+    <div class="sectionTitle"><b>Category C — Ramp Entry and Merging</b></div>
+    <p class="sub" style="text-align:left; margin-top:0;">
+      On-ramp entry and merging conflicts benefit from cooperative visibility union (V2V/V2I) over the conflict zone.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Video S11 — Ramp-1</h3>
+        <p>Ramp entry &amp; merging clip 1.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/ramp1_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S12 — Ramp-2</h3>
+        <p>Ramp entry &amp; merging clip 2.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/ramp2_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S13 — Ramp-3</h3>
+        <p>Ramp entry &amp; merging clip 3.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/ramp3_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S14 — Ramp-4</h3>
+        <p>Ramp entry &amp; merging clip 4.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/ramp4_web.mp4" type="video/mp4">
+        </video>
+      </article>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Category 4: Signal Start-Up & Queueing (S15–S18)       -->
+    <!-- ===================================================== -->
+    <div class="sectionTitle"><b>Category D — Signal Start-Up and Queueing</b></div>
+    <p class="sub" style="text-align:left; margin-top:0;">
+      Stop-and-go traffic near signalized intersections; cooperation improves observability of queue tails and restart dynamics.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Video S15 — Signal-1</h3>
+        <p>Signal start-up &amp; queueing clip 1.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Signal1_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S16 — Signal-2</h3>
+        <p>Signal start-up &amp; queueing clip 2.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Signal2_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S17 — Signal-3</h3>
+        <p>Signal start-up &amp; queueing clip 3.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Signal3_web.mp4" type="video/mp4">
+        </video>
+      </article>
+
+      <article class="card">
+        <h3>Video S18 — Signal-4</h3>
+        <p>Signal start-up &amp; queueing clip 4.</p>
+        <video controls preload="metadata" playsinline>
+          <source src="videos/Signal4_web.mp4" type="video/mp4">
+        </video>
+      </article>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- Category 5: Bus-Stop Interactions (S19–S22)            -->
+    <!-- ===================================================== -->
+    <div class="sectionTitle"><b>Category E — Bus-Stop Interactions</b></div>
+    <p class="sub" style="text-align:left; margin-top:0;">
+      Curbside interaction zones involving bus stopping, spillback queues, and lane changes; cooperation enhances curbside visibility.
+    </p>
+    <div class="grid">
+      <article class="card">
+        <h3>Video S19 — Bus-1</h3>
+        <p>Bus-stop interaction clip 1.</p>
         <video controls preload="metadata" playsinline>
           <source src="videos/Bus1_web.mp4" type="video/mp4">
         </video>
       </article>
 
       <article class="card">
-        <h3>Video S2 — Heavy-vehicle occlusion</h3>
-        <p>Large vehicles block line-of-sight; cooperative viewpoints enable occlusion lift.</p>
+        <h3>Video S20 — Bus-2</h3>
+        <p>Bus-stop interaction clip 2.</p>
         <video controls preload="metadata" playsinline>
-          <source src="videos/S2_heavy_vehicle.mp4" type="video/mp4" />
+          <source src="videos/Bus2_web.mp4" type="video/mp4">
         </video>
       </article>
 
       <article class="card">
-        <h3>Video S3 — Ramp entry & merging</h3>
-        <p>Merging conflict zones benefit from cooperative visibility union (V2V/V2I).</p>
+        <h3>Video S21 — Bus-3</h3>
+        <p>Bus-stop interaction clip 3.</p>
         <video controls preload="metadata" playsinline>
-          <source src="videos/S3_ramp_merge.mp4" type="video/mp4" />
+          <source src="videos/Bus3_web.mp4" type="video/mp4">
         </video>
       </article>
 
       <article class="card">
-        <h3>Video S4 — Signal start-up & queueing</h3>
-        <p>Queues along curves can be partially hidden; cooperation improves queue observability.</p>
+        <h3>Video S22 — Bus-4</h3>
+        <p>Bus-stop interaction clip 4.</p>
         <video controls preload="metadata" playsinline>
-          <source src="videos/S4_signal_queue.mp4" type="video/mp4" />
-        </video>
-      </article>
-
-      <article class="card">
-        <h3>Video S5 — Bus-stop interactions</h3>
-        <p>Curbside interactions create intermittent occlusions; cooperation enhances curbside visibility.</p>
-        <video controls preload="metadata" playsinline>
-          <source src="videos/S5_bus_stop.mp4" type="video/mp4" />
+          <source src="videos/Bus4_web.mp4" type="video/mp4">
         </video>
       </article>
     </div>
 
+    <!-- ===================================================== -->
+    <!-- Figures                                                -->
+    <!-- ===================================================== -->
     <div class="sectionTitle"><b>Figure Snapshots (from PDF)</b></div>
 
-    <!-- Put your exported PNG/JPG under /figures/ and edit the filenames below -->
     <div class="figure">
       <img src="figures/FigS1_scenario_gallery.png" alt="Figure S1" />
       <div class="caption"><b>Figure S1.</b> Scenario gallery from UAV recordings illustrating representative occlusion mechanisms.</div>
@@ -77,7 +264,6 @@
       <div class="caption"><b>Figure S3.</b> MATLAB Automated Driving Toolbox simulation view (BEV + sensor detections) for visibility evaluation.</div>
     </div>
 
-    <!-- Optional: provide PDF download -->
     <p class="sub" style="text-align:center;margin-top:18px;">
       Download the full supplementary PDF:
       <a href="files/Supplementary.pdf">Supplementary.pdf</a>
