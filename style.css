@@ -13,7 +13,8 @@ h1 { margin: 0 0 10px; font-size: 26px; line-height: 1.25; text-align: center; }
 video { width: 100%; border-radius: 12px; background: #000; }
 
 .figure { margin: 14px 0 18px; }
-.figure img { width: 100%; border-radius: 14px; border: 1px solid #eee; }
+.figure img { width: 100%; border-radius: 0; border: 1px solid #eee; }
+.figure.first img {width: 70%; display: block; margin: 0 auto;}
 .caption { margin-top: 8px; color: #555; font-size: 13px; line-height: 1.4; }
 
 .footer { margin-top: 34px; color: #666; font-size: 13px; text-align: center; }
