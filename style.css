@@ -15,7 +15,7 @@ video { width: 100%; border-radius: 12px; background: #000; }
 .figure { margin: 14px 0 18px; }
 .figure img { width: 100%; border-radius: 0; border: 1px solid #eee; }
 .figure.first img {width: 70%; display: block; margin: 0 auto; border: none;}
-.figure.second img { width: 90%; border-radius: 0; border: none; }
+.figure.second img {width: 90%; display: block; margin: 0 auto; border: none;}
 .caption { margin-top: 8px; color: #555; font-size: 13px; line-height: 1.4; }
 
 .footer { margin-top: 34px; color: #666; font-size: 13px; text-align: center; }
